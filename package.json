@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "postinstall": "(cd api && npm install) && (cd ui && npm install) && (cd e2e && npm install)"
+    "install-api": "cd api && npm install",
+    "install-ui": "cd ui && npm install",
+    "install-e2e": "cd e2e && npm install",
+    "postinstall": "npm run install-api && npm run install-ui && npm run install-e2e"
   }
 }
